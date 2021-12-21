@@ -1,9 +1,7 @@
 import os
 import time
 
-sensor = 1
-
-while sensor == 1:
+while True:
     os.system("clear")
     print("Temperatura da CPU")
     os.system("sensors")
