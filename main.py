@@ -1,26 +1,37 @@
 
 import time
+import os
 from alg import testMEM
 from alg import testCPU
 from alg import testGPU
+from alg import testDisk
 
 
 def main():
-    print('1- Teste Memoria \n2- Teste CPU \n3- Teste GPU')
 
-    teste = int(input('Qual Teste Deseja Fazer?'))
+    while True:
+        os.system("clear")
+        print('********************')
+        print('* 1- Teste Memoria *\n* 2- Teste CPU     * \n* 3- Teste GPU     *\n* 4- Teste HDD/SSD *')
+        print('********************')
 
-    while teste > 0:
+        teste = int(input('Qual Teste Deseja Fazer?'))
 
         if teste == 1:
-            testMEM()
+            for x in range(3):
+                testMEM()
 
         if teste == 2:
-            testCPU()
+            for x in range(3):
+                testCPU()
 
         if teste == 3:
-            testGPU()
-            break
+            for x in range(3):
+                testGPU()
+
+        if teste == 4:
+            for x in range(3):
+                testDisk()
 
 
 main()
